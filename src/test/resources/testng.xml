@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.appium.ApiDemos_debug.utils.TestListener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="ApiDemos-debug">
+        <classes>
+            <class name="com.appium.ApiDemos_debug.suites.home.HomeTest">
+                <methods>
+                    <include name="getHomePageTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
