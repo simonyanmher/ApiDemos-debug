@@ -16,6 +16,9 @@ public class Home extends Base<Home> {
     @AndroidFindBy(xpath = ConstantStrings.LOCATOR)
     private AndroidElement title;
 
+    @AndroidFindBy(accessibility = HomeStrings.ACCESS)
+    private AndroidElement access;
+
     @AndroidFindBy(accessibility = HomeStrings.ACCESSIBILITY)
     private AndroidElement accessibility;
 
@@ -64,6 +67,7 @@ public class Home extends Base<Home> {
         try {
             Assert.assertEquals(getTitle(), ConstantStrings.EXPECTED);
 
+            assert access.getText().equals(HomeStrings.ACCESS);
             assert accessibility.getText().equals(HomeStrings.ACCESSIBILITY);
             assert animation.getText().equals(HomeStrings.ANIMATION);
             assert app.getText().equals(HomeStrings.APP);
@@ -82,6 +86,10 @@ public class Home extends Base<Home> {
 
     public String getTitle() {
         return title.getText();
+    }
+
+    public AndroidElement getAccess() {
+        return access;
     }
 
     public AndroidElement getAccessibility() {
@@ -120,7 +128,7 @@ public class Home extends Base<Home> {
         return preference;
     }
 
-    public AndroidElement getText() {
+    public AndroidElement getTextElement() {
         return text;
     }
 

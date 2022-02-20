@@ -15,3 +15,4 @@ ApiDemos-debug.iml
 src/test/resources/ApiDemos-debug.properties
 src/test/resources/index.html
 .idea/
+.DS_Store

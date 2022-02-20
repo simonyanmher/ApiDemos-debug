@@ -1,6 +1,7 @@
 package com.appium.ApiDemos_debug.pages;
 
 import com.appium.ApiDemos_debug.Main;
+import io.appium.java_client.android.AndroidElement;
 
 public abstract class Base<T extends Base<T>> extends Main {
     private final String name = self().getClass().getSimpleName();
@@ -34,15 +35,25 @@ public abstract class Base<T extends Base<T>> extends Main {
         throw new Error(e);
     }
 
-    private void loadComponent() {
+    protected void exception(Exception e) {
+        logger.info(name + " Is Not Loaded! " + e.getMessage());
+    }
+
+    protected void loadComponent() {
         logger.info("Restarting.");
         this.load();
         logger.info("Restarted!");
     }
 
-    private void isLoadedComponent() {
+    private void isLoadedComponent() throws Error {
         logger.info(name + " Is Loading.");
         this.isLoaded();
         logger.info(name + " Is Loaded!");
+    }
+
+    protected void click(AndroidElement element) {
+        logger.info(name + " Clicking.");
+        element.click();
+        logger.info(name + " Clicked!");
     }
 }

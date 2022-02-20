@@ -8,7 +8,67 @@
         <classes>
             <class name="com.appium.ApiDemos_debug.suites.home.HomeTest">
                 <methods>
-                    <include name="getHomePageTest"/>
+                    <include name="getHomeTest"/>
+                </methods>
+            </class>
+            <class name="com.appium.ApiDemos_debug.suites.home.nested.access.AccessTest">
+                <methods>
+                    <include name="getAccessTest"/>
+                </methods>
+            </class>
+            <class name="com.appium.ApiDemos_debug.suites.home.nested.accessibility.AccessibilityTest">
+                <methods>
+                    <include name="getAccessibilityTest"/>
+                </methods>
+            </class>
+            <class name="com.appium.ApiDemos_debug.suites.home.nested.animation.AnimationTest">
+                <methods>
+                    <include name="getAnimationTest"/>
+                </methods>
+            </class>
+            <class name="com.appium.ApiDemos_debug.suites.home.nested.app.AppTest">
+                <methods>
+                    <include name="getAppTest"/>
+                </methods>
+            </class>
+            <class name="com.appium.ApiDemos_debug.suites.home.nested.content.ContentTest">
+                <methods>
+                    <include name="getContentTest"/>
+                </methods>
+            </class>
+            <class name="com.appium.ApiDemos_debug.suites.home.nested.graphics.GraphicsTest">
+                <methods>
+                    <include name="getGraphicsTest"/>
+                </methods>
+            </class>
+            <class name="com.appium.ApiDemos_debug.suites.home.nested.media.MediaTest">
+                <methods>
+                    <include name="getMediaTest"/>
+                </methods>
+            </class>
+            <class name="com.appium.ApiDemos_debug.suites.home.nested.nfc.NfcTest">
+                <methods>
+                    <include name="getNfcTest"/>
+                </methods>
+            </class>
+            <class name="com.appium.ApiDemos_debug.suites.home.nested.os.OsTest">
+                <methods>
+                    <include name="getOsTest"/>
+                </methods>
+            </class>
+            <class name="com.appium.ApiDemos_debug.suites.home.nested.preference.PreferenceTest">
+                <methods>
+                    <include name="getPreferenceTest"/>
+                </methods>
+            </class>
+            <class name="com.appium.ApiDemos_debug.suites.home.nested.text.TextTest">
+                <methods>
+                    <include name="getTextTest"/>
+                </methods>
+            </class>
+            <class name="com.appium.ApiDemos_debug.suites.home.nested.views.ViewsTest">
+                <methods>
+                    <include name="getViewsTest"/>
                 </methods>
             </class>
         </classes>

@@ -5,7 +5,6 @@ import com.appium.ApiDemos_debug.suites.BaseTest;
 import com.appium.ApiDemos_debug.suites.home.strings.HomeStrings;
 import com.appium.ApiDemos_debug.utils.ConstantStrings;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -21,9 +20,10 @@ public class HomeTest extends BaseTest {
     }
 
     @Test
-    public void getHomePageTest() {
+    public void getHomeTest() {
         Assert.assertEquals(home.getTitle(), ConstantStrings.EXPECTED);
 
+        assertEquals(home.getAccess().getText(), HomeStrings.ACCESS);
         assertEquals(home.getAccessibility().getText(), HomeStrings.ACCESSIBILITY);
         assertEquals(home.getAnimation().getText(), HomeStrings.ANIMATION);
         assertEquals(home.getApp().getText(), HomeStrings.APP);
@@ -33,14 +33,7 @@ public class HomeTest extends BaseTest {
         assertEquals(home.getNfc().getText(), HomeStrings.NFC);
         assertEquals(home.getOs().getText(), HomeStrings.OS);
         assertEquals(home.getPreference().getText(), HomeStrings.PREFERENCE);
-        assertEquals(home.getText().getText(), HomeStrings.TEXT);
+        assertEquals(home.getTextElement().getText(), HomeStrings.TEXT);
         assertEquals(home.getViews().getText(), HomeStrings.VIEWS);
-    }
-
-    @AfterTest
-    public void disposeHome() {
-        disposingLog(name);
-        driver.resetApp();
-        disposedLog(name);
     }
 }

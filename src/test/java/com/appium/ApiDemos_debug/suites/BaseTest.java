@@ -30,17 +30,19 @@ public class BaseTest extends Main {
         logger.info(name + " Initialized!");
     }
 
-    public void disposingLog(String name) {
-        logger.info(name + " Disposing.");
-    }
-
-    public void disposedLog(String name) {
-        logger.info(name + " Disposed!");
-    }
-
     protected void assertEquals(String actual, String expected) {
         logger.info("Actual And Expected Asserting.");
         Assert.assertEquals(actual, expected);
         logger.info("Actual: \"" + actual + "\" And Expected: \"" + expected + "\" Asserted!");
+    }
+
+    protected void scrollDown(String text) {
+        logger.info("Down Scrolling.");
+
+        driver.findElementByAndroidUIAutomator(
+                "new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + text + "\"));"
+        );
+
+        logger.info("Down Scrolled!");
     }
 }
